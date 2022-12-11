@@ -7,6 +7,7 @@ public class BirdJump : MonoBehaviour // 상속(MonoBehaviour)
 {
     Rigidbody2D rb; // 자료형 (속성으로 사용했던 거 ->  클래스)
 
+    public float jumpPower; // public으로 하면 유니티 에디터에서 설정 가능
 
 
     // Start is called before the first frame update
@@ -23,7 +24,7 @@ public class BirdJump : MonoBehaviour // 상속(MonoBehaviour)
         // 매 '프레임'마다 실행 (60fps -> 1초에 60 프레임)
         if (Input.GetMouseButtonDown(0)) // 마우스 왼쪽 버튼 눌렀을 때 -> 점프
         {
-            rb.velocity = Vector2.up * 3;// (0,1) * 3 -> 위로 3만큼 점프함
+            rb.velocity = Vector2.up * jumpPower;// (0,1) * 3 -> 위로 3만큼 점프함
         }
 
     }
