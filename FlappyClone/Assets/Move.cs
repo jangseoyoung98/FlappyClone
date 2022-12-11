@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// prefab 오브젝트 반복 -> Assests 폴더 안에 갖다 넣으면 자동으로 prefab가 되는 것
+
 public class Move : MonoBehaviour
 {
     public float speed; // 기둥의 이동 속도
@@ -21,8 +23,6 @@ public class Move : MonoBehaviour
         transform.position += Vector3.left * Time.deltaTime * speed;
 
 
-        // 트랜스폼은 기본적으로 가지고 있음
-        Debug.Log(transform.position);
-        
+            
     }
 }
