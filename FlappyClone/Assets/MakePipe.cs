@@ -2,10 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// 1:16:19부터 다시 시작! (22.12.11)
 
 public class MakePipe : MonoBehaviour
 {
+    public GameObject pipe;
+
+    public float timeDiff;
+
+    float timer = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +20,11 @@ public class MakePipe : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        timer += Time.deltaTime;
+        if (timer > timeDiff)
+        {
+            Instantiate(pipe); // pregfab을 찍어낸다.
+            timer = 0;
+        }
     }
 }
