@@ -23,7 +23,17 @@ public class MakePipe : MonoBehaviour
         timer += Time.deltaTime;
         if (timer > timeDiff)
         {
-            Instantiate(pipe); // pregfab을 찍어낸다.
+            GameObject newpipe;
+            newpipe = Instantiate(pipe); // pregfab을 찍어낸다.
+
+            // Random.Range(min, max)를 사용해서 파이프의 위치를 랜덤하게 출력한다.
+            float random_x = Random.Range(0.3f, 2.5f);
+            float random_y = Random.Range(-1.7f, 3f);
+            
+            newpipe.transform.position = new Vector3(random_x, random_y, 0); // 유니티 에디터의 transform의 position을 변경해 준다.
+
+            Destroy(newpipe, 10.0f);
+
             timer = 0;
         }
     }
