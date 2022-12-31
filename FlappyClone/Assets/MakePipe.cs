@@ -28,7 +28,7 @@ public class MakePipe : MonoBehaviour
                 
             // Random.Range(min, max)를 사용해서 파이프의 위치를 랜덤하게 출력한다.
             float random_x = Random.Range(0.3f, 2.5f);
-            float random_y = Random.Range(-1.7f, 3f);
+            float random_y = Random.Range(0.5f, 3f);
             // float random_z = Random.Range(-10f, 10f); -> 2D에서 z축은 티가 안 나는 걸까..쓰이지 않는 걸까..?
             
             newpipe.transform.position = new Vector3(random_x, random_y, 0); // 유니티 에디터의 transform의 position을 변경해 준다.
