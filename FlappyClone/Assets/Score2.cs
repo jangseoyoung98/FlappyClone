@@ -1,4 +1,5 @@
-// #1. 22/12/31_Score 기존 삭제하고 2로 다시 생성함
+// #2. 22/12/31_일단 Text UI 안 뜨는 거 Anchors 건드려서 해결은 함
+// ★ 이전이랑 비교하면서, 뭐가 달라진 건지 확인하기!
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
